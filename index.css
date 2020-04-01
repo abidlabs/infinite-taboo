@@ -14,7 +14,10 @@
   display: none
 
 }
-
+#card-count{
+  font-weight: bold;
+  color: #17a2b8;  
+}
 .navbar-brand
 {
   font-family: "Lobster", serif;
@@ -26,7 +29,6 @@
 }
 #growing {
 	font-weight: bold;
-	color: #17a2b8;
 }
 .lead {
 	padding-top: 20px;
@@ -39,6 +41,9 @@
   top: 80px;
 }
 
+body{
+  overflow: hidden; 
+}
 
 a[target="_blank"]::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
@@ -52,6 +57,7 @@ a[target="_blank"]::after {
   color: white;
   font-weight: bold;
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 #taboos-div{
@@ -59,8 +65,8 @@ a[target="_blank"]::after {
   padding: 10px;
   background-color: white;
   color: #17a2b8;
-  font-weight: bold;
-  font-size: 2rem;
+  font-weight: normal;
+  font-size: 3rem;
 }
 
 #taboos-div p{
