@@ -42,7 +42,7 @@
 }
 
 body{
-  overflow: hidden; 
+  /*overflow: hidden; */
 }
 
 a[target="_blank"]::after {
