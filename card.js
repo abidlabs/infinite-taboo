@@ -1,15 +1,23 @@
-$.ajax({
-  type: "GET",  
-  url: "https://abidlabs.github.io/infinite-taboo/out_data/data1.csv",
-  dataType: "text",       
-  success: function(response)  
-  {
-	fullData = $.csv.toArrays(response);
-	ordering = [...Array(fullData.length).keys()];
-	randomizeOrdering();
-	updateCardData();
-  }   
-});
+function loadData(data_urls){
+  for (var i = 0; i < data_urls.length; i++){
+    var data_url = data_urls[i];
+    $.ajax({
+      type: "GET",  
+      url: data_url,
+      dataType: "text",       
+      success: function(response)  
+      {
+        fullData = fullData.concat($.csv.toArrays(response));
+        ordering = [...Array(fullData.length).keys()];
+        randomizeOrdering();
+        updateCardData();
+      }   
+    });
+
+  }
+}
+
+
 
 $.urlParam = function(name, null_value){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -153,8 +161,15 @@ $(document).keydown(function(e) {
 
 // Initialization
 
-var fullData;
+var fullData = [];
 var ordering;
 var currentCardId;
 var seed = parseInt($.urlParam('seed', 0));
 var idx = parseInt($.urlParam('idx', 0));
+
+var data_urls = [
+  "https://abidlabs.github.io/infinite-taboo/out_data/data1.csv",
+  "https://abidlabs.github.io/infinite-taboo/out_data/data2.csv",
+  "https://abidlabs.github.io/infinite-taboo/out_data/data3.csv",
+]
+loadData(data_urls);
