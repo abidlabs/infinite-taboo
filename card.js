@@ -89,6 +89,12 @@ function beep() {
     snd.play();
 }
 
+function chime() {
+	var snd = new Audio('http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3');
+	snd.play();
+	setTimeout(snd.pause, 500)
+}
+
 var timerValue = 60
 function startCountdown(){
 	timerValue -= 1;
@@ -115,9 +121,14 @@ function startCountdown(){
 $('#timerButton').click(startCountdown)
 $('#nextButton').click(nextCard)
 
-$('body').on("swiperight",function(){
+$('#card-div').on("swiperight",function(){
+  previousCard()
+});
+
+$('#card-div').on("swipeleft",function(){
   nextCard()
 });
+
 
 
 $(document).keydown(function(e) {
