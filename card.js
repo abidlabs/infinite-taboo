@@ -100,7 +100,7 @@ function chime() {
 	snd.play();
 }
 
-var timerValue = 60
+var timerValue = 3
 function startCountdown(){
 	timerValue -= 1;
 	$('#timerValue').html(timerValue)
@@ -113,6 +113,8 @@ function startCountdown(){
 		$('#timerButton').addClass('btn-danger')
 		$('#timerButton').removeAttr('disabled')
 		beep(); setTimeout(beep, 300);
+		$('#card-div').css('background-color', '#dc3545'); 
+		setTimeout(function() { $('#card-div').css('background-color', '#17a2b8') }, 1000);
 		timerValue = 60
 	} else {
 		setTimeout(startCountdown, 1000);
