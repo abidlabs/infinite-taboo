@@ -24,6 +24,7 @@ $.urlParam = function(name, null_value){
 
 function nextCard(){
 	idx = (idx + 1) % fullData.length;
+	chime();
 	updateCardData();
 	return false;
 }
@@ -89,10 +90,14 @@ function beep() {
     snd.play();
 }
 
-function chime() {
-	var snd = new Audio('http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3');
+function woosh() {
+	var snd = new Audio('woosh.mp3');
 	snd.play();
-	setTimeout(snd.pause, 500)
+}
+
+function chime() {
+	var snd = new Audio('ping.wav');
+	snd.play();
 }
 
 var timerValue = 60
