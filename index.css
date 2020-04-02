@@ -1,4 +1,10 @@
-.masthead {
+.masthead-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.masthead-index {
   height: 100vh;
   min-height: 500px;
   background-image: url('bg.jpeg');
@@ -6,14 +12,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-#masthead-demo{
-  display: none;
+
+
+@media only screen and (min-width: 768px) {
+  #masthead-intro{
+    max-width: 800px;
+  }
 }
 
-#myvideo{
-  display: none
 
-}
 #card-count{
   font-weight: bold;
   color: #17a2b8;  
@@ -23,13 +30,7 @@
   font-family: "Lobster", serif;
   font-size: 24px;
 }
-#acne {
-	font-weight: bold;
-	color: #ca5959;
-}
-#growing {
-	font-weight: bold;
-}
+
 .lead {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -42,7 +43,7 @@
 }
 
 body{
-  /*overflow: hidden; */
+  background-image: url('bg.jpeg');
 }
 
 a[target="_blank"]::after {
@@ -69,11 +70,25 @@ a[target="_blank"]::after {
   font-size: 3rem;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #card-div{
+    font-size: 2rem !important;
+  }
+  #taboos-div {
+    font-size: 2rem !important;
+  }
+}
+
+
 #taboos-div p{
   margin-top: 40px;
   margin-bottom: 40px;  
 }
 
+#card-number{
+  font-size: 0.75rem;
+}
 
 #page-content {
   flex: 1 0 auto;
@@ -86,7 +101,6 @@ a[target="_blank"]::after {
   bottom: 0%;
   width: 100%;
   color: white;
-  display: none;
 }
 #download-desktop-app{
     color: white;
