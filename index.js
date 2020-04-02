@@ -1,18 +1,24 @@
-var data;
-var count;
+var data = [];
+var count = 0;
 
-$.ajax({
-  type: "GET",  
-  url: "https://abidlabs.github.io/infinite-taboo/out_data/data1.csv",
-  dataType: "text",       
-  success: function(response)  
-  {
-	data = $.csv.toArrays(response);
-	count = data.length
-	setCount();
-	setUrl();
-  }   
-});
+function loadData(data_urls){
+	for (var i = 0; i < data_urls.length; i++){
+		var data_url = data_urls[i];
+		$.ajax({
+		  type: "GET",  
+		  url: data_url,
+		  dataType: "text",       
+		  success: function(response)  
+		  {
+			data = data.concat($.csv.toArrays(response));
+			count = data.length;
+			setCount();
+			setUrl();		
+		  }   
+		});
+
+	}
+}
 
 function setCount(){
 	$('#card-count').html(count)
@@ -23,3 +29,10 @@ function setUrl(){
 	$('#see-card-button').attr("href", 'card.html?seed=' + seed)
 }
 
+
+var data_urls = [
+	"https://abidlabs.github.io/infinite-taboo/out_data/data1.csv",
+	"https://abidlabs.github.io/infinite-taboo/out_data/data2.csv",
+	"https://abidlabs.github.io/infinite-taboo/out_data/data3.csv",
+]
+loadData(data_urls);

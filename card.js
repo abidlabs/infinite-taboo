@@ -100,7 +100,7 @@ function chime() {
 	snd.play();
 }
 
-var timerValue = 3
+var timerValue = 60
 function startCountdown(){
 	timerValue -= 1;
 	$('#timerValue').html(timerValue)
