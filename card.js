@@ -111,15 +111,15 @@ function chime() {
 var timerValue = 60
 function startCountdown(){
 	timerValue -= 1;
-	$('#timerValue').html(timerValue)
-	$('#timerButton').attr('disabled', 'disabled')
-	$('#timerButton').addClass('btn-info')
-	$('#timerButton').removeClass('btn-danger')
+	$('.timerValue').html(timerValue)
+	$('.timerButton').attr('disabled', 'disabled')
+	$('.timerButton').addClass('btn-info')
+	$('.timerButton').removeClass('btn-danger')
 
 	if (timerValue == 0) {
-		$('#timerButton').removeClass('btn-info')
-		$('#timerButton').addClass('btn-danger')
-		$('#timerButton').removeAttr('disabled')
+		$('.timerButton').removeClass('btn-info')
+		$('.timerButton').addClass('btn-danger')
+		$('.timerButton').removeAttr('disabled')
 		beep(); setTimeout(beep, 300);
 		$('#card-div').css('background-color', '#dc3545'); 
 		setTimeout(function() { $('#card-div').css('background-color', '#17a2b8') }, 1000);
@@ -133,8 +133,8 @@ function startCountdown(){
 
 // Bindings
 
-$('#timerButton').click(startCountdown)
-$('#nextButton').click(nextCard)
+$('.timerButton').click(startCountdown)
+$('.nextButton').click(nextCard)
 
 $('#card-div').on("swiperight",function(){
   previousCard()

@@ -25,6 +25,17 @@
     <meta name="twitter:description" content="Using artificial intelligence to generate fresh cards so you can keep playing!">
     <meta name="twitter:image" content="https://abidlabs.github.io/infinite-taboo/taboo-logo2.png">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52040224-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-52040224-4');
+    </script>
+
+
   </head>
 
 <body>
@@ -42,13 +53,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="download.html">FAQ</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
         </li>
       </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      &nbsp;&nbsp;&nbsp;<button class="btn btn-info my-2 my-sm-0" id="timerButton">&#x23F2; <span id="timerValue">60</span>s Timer</button>
-      &nbsp;&nbsp;&nbsp;<button class="btn btn-dark my-2 my-sm-0" id="nextButton">&#8680; Next Card<span class="d-lg-none"> (swipe)</span></button>
+    <form class="form-inline my-2 my-lg-0 d-none d-lg-block">
+      &nbsp;&nbsp;&nbsp;<button class="btn btn-info timerButton">&#x23F2; <span class="timerValue">60</span>s Timer</button>
+      &nbsp;&nbsp;&nbsp;<button class="btn btn-dark nextButton">&#8680; Next Card<span class="d-lg-none"> (swipe)</span></button>
     </form>
 
 
@@ -72,6 +83,17 @@
   </div>
 
 </header>
+
+    <footer class="footer d-lg-none">
+      <div class="container">
+          <form class="form-inline my-2 my-lg-0">
+      &nbsp;&nbsp;&nbsp;<button class="btn btn-info timerButton bottomPadding">&#x23F2; <span class="timerValue">60</span>s Timer</button>
+      &nbsp;&nbsp;&nbsp;<button class="btn btn-dark nextButton bottomPadding">&#8680; Next Card (swipe)</span></button>
+    </form>
+
+      </div>
+    </footer>
+
 
   </body>
 

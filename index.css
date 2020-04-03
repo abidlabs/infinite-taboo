@@ -51,6 +51,12 @@ a[target="_blank"]::after {
   margin: 0 3px 0 5px;
 }
 
+#faq-container{
+  margin-top:100px;
+}
+
+
+
 #card-div{
   margin-top:100px;
   padding: 20px;
@@ -86,6 +92,10 @@ a[target="_blank"]::after {
   margin-bottom: 40px;  
 }
 
+.bottomPadding{
+  margin-bottom: 10px;
+}
+
 #card-number{
   font-size: 0.75rem;
 }
@@ -94,14 +104,16 @@ a[target="_blank"]::after {
   flex: 1 0 auto;
 }
 
-#sticky-footer {
-  flex-shrink: none;
-  font-weight: bold;
+
+.footer {
   position: fixed;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
-  color: white;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
 }
+
 #download-desktop-app{
     color: white;
 }
