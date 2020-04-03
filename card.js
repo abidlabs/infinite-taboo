@@ -32,7 +32,7 @@ $.urlParam = function(name, null_value){
 
 function nextCard(){
 	idx = (idx + 1) % fullData.length;
-	chime();
+	woosh();
 	updateCardData();
 	return false;
 }
