@@ -82,7 +82,7 @@ function updateCardData(){
 	$("#key-word").html(sample[0])
 	
 	var taboo_words = sample[1].split(",")
-	shuffleArrayInPlace(taboo_words)
+	// shuffleArrayInPlace(taboo_words)
 	
 	var taboo_words_holders = $('#taboos-div').children('p')
 	for (var i = 0; i < taboo_words_holders.length; i++){
