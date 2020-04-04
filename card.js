@@ -169,9 +169,9 @@ var idx = parseInt($.urlParam('idx', 0));
 
 var data_urls = [
   "https://abidlabs.github.io/infinite-taboo/out_data/data1.csv",
-  "https://abidlabs.github.io/infinite-taboo/out_data/data2.csv",
-  "https://abidlabs.github.io/infinite-taboo/out_data/data3.csv",
-  "https://abidlabs.github.io/infinite-taboo/out_data/data4.csv",
-  "https://abidlabs.github.io/infinite-taboo/out_data/data-user-submitted.csv",
+  // "https://abidlabs.github.io/infinite-taboo/out_data/data2.csv",
+  // "https://abidlabs.github.io/infinite-taboo/out_data/data3.csv",
+  // "https://abidlabs.github.io/infinite-taboo/out_data/data4.csv",
+  // "https://abidlabs.github.io/infinite-taboo/out_data/data-user-submitted.csv",
 ]
 loadData(data_urls);
